@@ -45,7 +45,7 @@ int main()
     }
 
     // Sætter input og output for BOOT_KEY og SYS_LED4
-    //virtualBootkeyDir |=
+    *(unsigned long*)virtualBootkeyDir |= 0x80UL;
     *(unsigned long*)virtualSysled4Dir &= 0xffffffef;
 
     for(;;)
